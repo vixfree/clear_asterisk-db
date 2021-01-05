@@ -1,23 +1,21 @@
 #!/bin/bash
 # script clear asterisk database calls (mysql/mariadb)
 # for Debian OS Linux - version 9,10
-# athor Koshuba V.O. - (c) 2021
-# license GPL 2.0
-# email master@qbpro.ru
+# athor: Koshuba V.O. - (c) 2021
+# script version: 1.0.1
+# license: GPL 2.0
+# email: master@qbpro.ru
 
-## - connect data
+## - control manual values
+# - connect data
 db_host="localhost";                                                           # host mysql
 db_name="cdr";                                                                 # name database
 db_login="admindb";                                                            # login for database
 db_pass="passdb";                                                              # pass for login
 
-## - tools for script
-get_tools=( "mysql" "mysqlcheck" "mysqldump" "pigz" "locale" );                #tools for script
-
-## - admin values
+# - admin email
 email="admin@mydomen.ru";                                                      # mail address for notification
-
-## - control manual values
+# - clear values
 type="month";                                                                  # time interval (SECOND,MINUTE,HOUR,DAY,MONTH,YEAR)
 num="3";                                                                       # saze (the number 3 months)
 records="/home/calls";                                                         # call recording directory
@@ -26,6 +24,7 @@ arh_path="/home/backup/arh";                                                   #
 sw_backup="1";                                                                 # create or not create backup 1-yes,0-no
 
 ## - script values
+get_tools=( "mysql" "mysqlcheck" "mysqldump" "pigz" "locale" );                # tools for script
 set_lang="0";                                                                  # locale (ru & en )
 flock="/tmp/cleardb_asterisk.lock";
 log="/var/log/clear_asterisk-db.log";                                          # temporary log file
