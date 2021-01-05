@@ -1,5 +1,5 @@
-* EN:
--
+* EN
+<hr>
 Script for automatic cleaning of logs in the MySQL database and call records of Asterisk PBX.
 
 * manual script  values
@@ -19,8 +19,8 @@ arh_path="/home/backup/arh";  # archive of previous calls and database<br>
 sw_backup="1";                # automatic create or not create backup 1-yes,0-no<br>
 
 
-* RU:
--
+* RU
+<hr>
 Скрипт автоматической чистки логов в базе данных MySQL и записей звонков Asterisk АТС <br>
 
 * необходимые параметры для скрипта
